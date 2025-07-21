@@ -5,6 +5,21 @@ import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { HiDocumentDownload } from "react-icons/hi";
 import profile from "../assets/profile.jpg";
+import resume from "../assets/Anupriya_BCA.pdf";
+
+// Animation settings
+const sectionAnimation = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  }),
+};
 
 export default function Hero() {
   const projects = [
@@ -29,7 +44,6 @@ export default function Hero() {
       live: "#",
       github: "#",
     },
-    // Add more projects here...
   ];
 
   const skills = [
@@ -39,9 +53,11 @@ export default function Hero() {
     { name: "Figma, VS Code", level: 75 },
     { name: "Teamwork, Communication", level: 70 },
   ];
+
   return (
     <div className="bg-gradient-to-br from-black via-gray-900 to-black text-gray-200 min-h-screen font-sans text-center">
       <Navbar />
+
       {/* Hero Section */}
       <section id="home" className="py-16 px-4">
         <motion.img
@@ -68,8 +84,15 @@ export default function Hero() {
           & clean code.
         </p>
       </section>
+
       {/* Contact Info */}
-      <section className="py-12 px-6">
+      <motion.section
+        className="py-12 px-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionAnimation}
+      >
         <h2 className="text-2xl font-semibold mb-4 text-white">
           📞 Contact Information
         </h2>
@@ -100,7 +123,7 @@ export default function Hero() {
             <FaGithub />
           </a>
           <a
-            href="/resume.pdf"
+            href={resume}
             download
             className="text-violet-400 hover:text-violet-300 transition transform hover:scale-125 duration-200"
             title="Download Resume"
@@ -111,7 +134,8 @@ export default function Hero() {
         <div className="mt-10">
           <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse inline-block" />
         </div>
-      </section>
+      </motion.section>
+
       {/* About Me */}
       <section id="about" className="py-16 px-6 text-center">
         <div className="max-w-4xl mx-auto">
@@ -134,28 +158,62 @@ export default function Hero() {
             <span className="text-violet-400 font-semibold">
               Computer Science student
             </span>{" "}
-            with a love for crafting modern and responsive web applications.
-            With hands-on experience in{" "}
-            <span className="text-blue-400">HTML</span>,{" "}
-            <span className="text-yellow-300">CSS</span>,
-            <span className="text-yellow-400"> JavaScript</span>,{" "}
-            <span className="text-cyan-400">React</span>, and
-            <span className="text-purple-400"> Tailwind</span>, I specialize in
-            building sleek, interactive UIs that deliver both style and
-            performance.
+            with a love for crafting modern and responsive web applications...
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="mt-8 flex justify-center"
-          >
-            <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse" />
-          </motion.div>
+          <div className="mt-10">
+            <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse inline-block" />
+          </div>
         </div>
       </section>
-      {/* Projects */}
+
+      {/* Skills */}
+      <section id="skills" className="py-16 px-6 text-center">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-white mb-10 flex items-center justify-center gap-2"
+          >
+            <span>🧠</span> Skills
+          </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="max-w-2xl mx-auto space-y-6"
+          >
+            {skills.map((skill, index) => (
+              <div key={index}>
+                <div className="flex justify-between mb-1 text-sm text-gray-300">
+                  <span>{skill.name}</span>
+                  <span>{skill.level}%</span>
+                </div>
+                <div className="w-full h-4 bg-gray-700 rounded-full overflow-hidden">
+                  <motion.div
+                    className="h-full bg-violet-500 rounded-full"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    transition={{
+                      duration: 1.5,
+                      ease: "easeInOut",
+                      delay: index * 0.2,
+                    }}
+                    viewport={{ once: true }}
+                  />
+                </div>
+              </div>
+            ))}
+          </motion.div>
+          <div className="mt-10">
+            <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse inline-block" />
+          </div>
+        </div>
+      </section>
+
+      {/*Projects */}
       <section
         id="projects"
         className="py-16 px-6 via-gray-800 to-gray-900 text-center"
@@ -237,93 +295,94 @@ export default function Hero() {
           </div>
         </motion.div>
       </section>
-      {/* Skills */}
-      <section id="skills" className="py-16 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-white mb-10 flex items-center justify-center gap-2"
-          >
-            <span>🧠</span> Skills
-          </motion.h2>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="max-w-2xl mx-auto space-y-6"
-          >
-            {skills.map((skill, index) => (
-              <div key={index}>
-                <div className="flex justify-between mb-1 text-sm text-gray-300">
-                  <span>{skill.name}</span>
-                  <span>{skill.level}%</span>
-                </div>
-                <div className="w-full h-4 bg-gray-700 rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full bg-violet-500 rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{
-                      duration: 1.5,
-                      ease: "easeInOut",
-                      delay: index * 0.2,
-                    }}
-                    viewport={{ once: true }}
-                  />
-                </div>
-              </div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="mt-10 flex justify-center"
-          >
-            <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse" />
-          </motion.div>
+      {/* Education */}
+      <motion.section
+        id="education"
+        className="py-12 px-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionAnimation}
+      >
+        <h2 className="text-2xl font-semibold mb-4 text-white">🗂️ Education</h2>
+        <div className="text-gray-400 max-w-xl mx-auto space-y-3">
+          <p>
+            <strong>BCA</strong> – SHRI RAMSWAROOP MEMORIAL UNIVERSITY, 2023 –
+            Present (CGPA: 8.32)
+          </p>
+          <p>
+            <strong>Intermediate</strong> – LUCKNOW PUBLIC SCHOOL, 2023 (90.8%)
+          </p>
+          <p>
+            <strong>High School</strong> – LUCKNOW PUBLIC SCHOOL, 2021 (90.2%)
+          </p>
         </div>
-      </section>
-      {/* Experience & Education */}
-      <section id="Education" className="py-12 px-6">
+        <div className="mt-10">
+          <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse inline-block" />
+        </div>
+      </motion.section>
+
+      {/* Experience */}
+      <motion.section
+        id="experience"
+        className="py-12 px-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionAnimation}
+      >
         <h2 className="text-2xl font-semibold mb-4 text-white">
-          🗂️ Experience & Education
+          🗂️ Experience
         </h2>
         <div className="text-gray-400 max-w-xl mx-auto">
           <p>
-            <strong>Intern - Web Developer</strong> at ABC Solutions (2024)
-          </p>
-          <p>
-            <strong>BCA</strong> - XYZ University, 2023 - Present
+            <strong>Frontend Developer Intern</strong> at Meadow Agricultures
+            Pvt. Ltd.
           </p>
         </div>
-      </section>
-      {/* Achievements & Certifications */}
-      <section id="achievements" className="py-12 px-6">
+        <div className="mt-10">
+          <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse inline-block" />
+        </div>
+      </motion.section>
+
+      {/* Certifications */}
+      <motion.section
+        id="certifications"
+        className="py-12 px-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionAnimation}
+      >
         <h2 className="text-2xl font-semibold mb-4 text-white">
-          🏆 Achievements & Certifications
+          🏆 Certifications
         </h2>
-        <ul className="list-disc list-inside text-gray-400 max-w-xl mx-auto text-left">
-          <li>Coursera Full Stack Certificate</li>
-          <li>Winner - Hackathon 2024, Lucknow</li>
+        <ul className="list-disc list-inside text-gray-400 max-w-xl mx-auto text-left space-y-1">
+          <li>AINCAT 2025</li>
+          <li>JavaScript Certification</li>
         </ul>
-      </section>
-      {/* Hire Me Button */}
-      <section className="py-12 px-6">
-        <h2 className="text-2xl font-semibold mb-6 text-white">
-          📨 Interested in working together?
-        </h2>
+        <div className="mt-10">
+          <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse inline-block" />
+        </div>
+      </motion.section>
+
+      {/* Contact Button */}
+      <motion.section
+        className="py-12 px-6 text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionAnimation}
+      >
         <a
           href="mailto:anupriya@example.com"
           className="inline-block bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-6 rounded transition duration-300"
         >
-          Hire Me
+          Contact Me
         </a>
-      </section>
+      </motion.section>
+
       {/* Footer */}
       <footer className="text-center text-sm py-6 text-gray-500">
         © 2025 Anupriya Singh. All rights reserved.
