@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { HiDocumentDownload } from "react-icons/hi";
+import profile from "../assets/profile.jpg";
 
 export default function Hero() {
   const projects = [
@@ -44,7 +45,7 @@ export default function Hero() {
       {/* Hero Section */}
       <section id="home" className="py-16 px-4">
         <motion.img
-          src="src/assets/WhatsApp Image 2025-07-21 at 16.33.58_98872091.jpg"
+          src={profile}
           alt="Profile"
           className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-700"
           initial={{ scale: 0 }}
