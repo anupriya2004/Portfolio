@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { HiDocumentDownload } from "react-icons/hi";
+import { SiLeetcode } from "react-icons/si";
 import profile from "../assets/profile.jpg";
 import resume from "../assets/Anupriya_BCA.pdf";
 
@@ -98,14 +99,14 @@ export default function Hero() {
         </h2>
         <div className="flex justify-center items-center gap-6 text-2xl mt-6">
           <a
-            href="mailto:anupriya@example.com"
+            href="mailto:singhanupriya2008@gmail.com"
             className="text-violet-400 hover:text-violet-500 transition transform hover:scale-125 duration-200"
             title="Email"
           >
             <MdEmail />
           </a>
           <a
-            href="https://linkedin.com/in/anupriya"
+            href="https://www.linkedin.com/in/anupriya-singh-a2434a289/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-400 transition transform hover:scale-125 duration-200"
@@ -114,7 +115,16 @@ export default function Hero() {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/anupriya"
+            href="https://leetcode.com/u/anupriyaasingh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-gray-300 transition transform hover:scale-125 duration-200"
+            title="Leetcode"
+          >
+            <SiLeetcode />
+          </a>
+          <a
+            href="https://github.com/anupriya2004"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-300 transition transform hover:scale-125 duration-200"
@@ -338,7 +348,7 @@ export default function Hero() {
         <div className="text-gray-400 max-w-xl mx-auto">
           <p>
             <strong>Frontend Developer Intern</strong> at Meadow Agricultures
-            Pvt. Ltd.
+            Pvt. Ltd. (June 2025-July 2025 )
           </p>
         </div>
         <div className="mt-10">
@@ -376,7 +386,7 @@ export default function Hero() {
         variants={sectionAnimation}
       >
         <a
-          href="mailto:anupriya@example.com"
+          href="mailto:singhanupriya2008@gmail.com"
           className="inline-block bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-6 rounded transition duration-300"
         >
           Contact Me

@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 const sections = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
-  { name: "Projects", id: "projects" },
   { name: "Skills", id: "skills" },
+  { name: "Projects", id: "projects" },
   { name: "Education", id: "education" },
   { name: "Experience", id: "experience" },
   { name: "Certifications", id: "certifications" },
