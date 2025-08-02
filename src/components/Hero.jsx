@@ -7,6 +7,7 @@ import { HiDocumentDownload } from "react-icons/hi";
 import { SiLeetcode } from "react-icons/si";
 import profile from "../assets/profile.jpg";
 import resume from "../assets/Anupriya_BCA.pdf";
+import Skills from "./Skills";
 
 // Animation settings
 const sectionAnimation = {
@@ -177,51 +178,7 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* Skills */}
-      <section id="skills" className="py-16 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-white mb-10 flex items-center justify-center gap-2"
-          >
-            <span>🧠</span> Skills
-          </motion.h2>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="max-w-2xl mx-auto space-y-6"
-          >
-            {skills.map((skill, index) => (
-              <div key={index}>
-                <div className="flex justify-between mb-1 text-sm text-gray-300">
-                  <span>{skill.name}</span>
-                  <span>{skill.level}%</span>
-                </div>
-                <div className="w-full h-4 bg-gray-700 rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full bg-violet-500 rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{
-                      duration: 1.5,
-                      ease: "easeInOut",
-                      delay: index * 0.2,
-                    }}
-                    viewport={{ once: true }}
-                  />
-                </div>
-              </div>
-            ))}
-          </motion.div>
-          <div className="mt-10">
-            <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse inline-block" />
-          </div>
-        </div>
-      </section>
+      <Skills />
 
       {/*Projects */}
       <section
