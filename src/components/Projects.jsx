@@ -7,8 +7,8 @@ export default function Projects() {
       title: "Portfolio Website",
       description:
         "Personal portfolio built using React, Vite, Tailwind CSS, and Framer Motion. Live demo and GitHub code available.",
-      live: "#",
-      github: "#",
+      live: "https://portfolio-self-nine-39.vercel.app/",
+      github: "https://github.com/anupriya2004/Portfolio",
     },
     {
       title: "Bank Management System",
@@ -20,9 +20,9 @@ export default function Projects() {
     {
       title: "Learnify LMS",
       description:
-        "A full-stack e-learning platform with login, courses, and a student dashboard.",
-      live: "#",
-      github: "#",
+        "The frontend of an e-learning platform with various static pages made with React,.",
+      live: "https://learnify-ruby.vercel.app",
+      github: "https://github.com/anupriya2004/Learnify",
     },
   ];
 

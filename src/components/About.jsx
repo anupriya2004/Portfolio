@@ -21,9 +21,18 @@ export default function About() {
         >
           I'm a passionate{" "}
           <span className="text-violet-400 font-semibold">
-            Computer Science student
+            Full Stack Developer(MERN)
           </span>{" "}
-          with a love for crafting modern and responsive web applications...
+          with a strong foundation in building dynamic, user-friendly web
+          applications. Skilled in frontend and backend technologies, I enjoy
+          creating seamless digital experiences from concept to deployment.
+          Alongside development, I am actively learning Data Structures and
+          Algorithms (DSA) to enhance my problem-solving abilities and write
+          efficient, scalable code. With a keen eye for aesthetics, I also work
+          as a UI/UX Designer, crafting intuitive interfaces that blend
+          functionality with visual appeal. I am driven by curiosity,
+          creativity, and a commitment to continuous learning, always seeking
+          opportunities to innovate and deliver impactful solutions.
         </motion.p>
 
         <div className="mt-10">
