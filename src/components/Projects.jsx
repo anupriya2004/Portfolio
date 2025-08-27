@@ -14,15 +14,22 @@ export default function Projects() {
       title: "Bank Management System",
       description:
         "A Python and Tkinter based GUI for managing customer banking activities securely.",
-      live: "#",
+      live: "",
       github: "#",
     },
     {
-      title: "Learnify LMS",
+      title: "Learnify:An E-learning platform",
       description:
-        "The frontend of an e-learning platform with various static pages made with React,.",
+        "The frontend of an e-learning platform with various static pages made with React.",
       live: "https://learnify-ruby.vercel.app",
       github: "https://github.com/anupriya2004/Learnify",
+    },
+    {
+      title: "MediConnect",
+      description:
+        "MediConnect is a web-based appointment booking platform designed to allow patients to easily search for doctors, view their availability, and book appointments online, eliminating the need for long waiting times and manual scheduling.",
+      live: "https://prescripto-0oze.onrender.com",
+      github: "https://github.com/iampraveen08/MediConnect",
     },
   ];
 
