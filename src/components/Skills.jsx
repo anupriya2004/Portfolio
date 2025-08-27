@@ -11,7 +11,10 @@ import {
   SiGit,
   SiGithub,
   SiMysql,
+  SiFigma,
+  SiCanva,
 } from "react-icons/si";
+import { DiPython } from "react-icons/di";
 
 const techLogos = [
   { name: "HTML", icon: <SiHtml5 className="text-orange-500" />, level: 90 },
@@ -35,6 +38,9 @@ const techLogos = [
   { name: "Git", icon: <SiGit className="text-red-500" />, level: 85 },
   { name: "GitHub", icon: <SiGithub className="text-white" />, level: 90 },
   { name: "MySQL", icon: <SiMysql className="text-blue-700" />, level: 80 },
+  { name: "Python", icon: <DiPython className="text-yellow-400" />, level: 90 },
+  { name: "Figma", icon: <SiFigma className="text-pink-500" />, level: 85 },
+  { name: "Canva", icon: <SiCanva className="text-sky-500" />, level: 75 },
 ];
 
 export default function Skills() {
