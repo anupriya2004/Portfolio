@@ -4,6 +4,13 @@ import React from "react";
 export default function Projects() {
   const projects = [
     {
+      title: "Currency Convertor",
+      description:
+        "Personal portfolio built using React, Vite, Tailwind CSS, and Framer Motion. Live demo and GitHub code available.",
+      live: "https://currency-convertor-rose-eta.vercel.app",
+      github: "https://github.com/anupriya2004/Currency-Convertor",
+    },
+    {
       title: "Portfolio Website",
       description:
         "Personal portfolio built using React, Vite, Tailwind CSS, and Framer Motion. Live demo and GitHub code available.",
