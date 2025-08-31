@@ -26,7 +26,7 @@ export default function Education() {
       <div className="text-gray-400 max-w-xl mx-auto space-y-3">
         <p>
           <strong>BCA</strong> – SHRI RAMSWAROOP MEMORIAL UNIVERSITY, 2023 –
-          Present (CGPA: 8.32)
+          Present (CGPA: 8.49)
         </p>
         <p>
           <strong>Intermediate</strong> – LUCKNOW PUBLIC SCHOOL, 2023 (90.8%)
