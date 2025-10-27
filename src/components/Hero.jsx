@@ -50,11 +50,11 @@ export default function Hero() {
           Anupriya Singh
         </motion.h1>
         <p className="text-xl text-gray-400 mt-2">
-          Web Developer & UI/UX Designer
+          Aspiring Data Engineer | Python | MySQL | Hadoop | Spark
         </p>
         <p className="mt-4 text-gray-500 max-w-xl mx-auto">
-          Passionate about creating seamless user experiences with modern design
-          & clean code.
+          Passionate about building efficient data pipelines and delivering
+          seamless data-driven solutions through clean, optimized code.
         </p>
       </section>
 

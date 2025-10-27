@@ -28,6 +28,7 @@ export default function Certifications() {
       <ul className="list-disc list-inside text-gray-400 max-w-xl mx-auto text-left space-y-1">
         <li>AINCAT 2025</li>
         <li>JavaScript Certification</li>
+        <li>The FourFold CodeQuest</li>
       </ul>
       <div className="mt-10">
         <span className="w-20 h-1 bg-violet-500 rounded-full animate-pulse inline-block" />

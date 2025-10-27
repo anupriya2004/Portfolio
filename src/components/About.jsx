@@ -19,18 +19,13 @@ export default function About() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-gray-300 text-lg leading-relaxed"
         >
-          I'm a passionate{" "}
-          <span className="text-violet-400 font-semibold">Web Developer</span>{" "}
-          with a strong foundation in building dynamic, user-friendly web
-          applications. Skilled in frontend technologies, I enjoy creating
-          seamless digital experiences from concept to deployment. Alongside
-          development, I am actively learning Data Structures and Algorithms
-          (DSA) to enhance my problem-solving abilities and write efficient,
-          scalable code. With a keen eye for aesthetics, I also work as a UI/UX
-          Designer, crafting intuitive interfaces that blend functionality with
-          visual appeal. I am driven by curiosity, creativity, and a commitment
-          to continuous learning, always seeking opportunities to innovate and
-          deliver impactful solutions.
+          Motivated BCA student with expertise in{" "}
+          <span className="text-violet-400 font-semibold">
+            Python, MySQL, Hadoop, and Spark.
+          </span>{" "}
+          Proficient in ETL/ELT processes, data pipeline development, and large
+          dataset analysis. Seeking opportunities to tackle data challenges and
+          excel in a dynamic setting.
         </motion.p>
 
         <div className="mt-10">

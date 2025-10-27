@@ -25,8 +25,8 @@ export default function Experience() {
       <h2 className="text-2xl font-semibold mb-4 text-white">🗂️ Experience</h2>
       <div className="text-gray-400 max-w-xl mx-auto">
         <p>
-          <strong>Frontend Developer Intern</strong> at Meadow Agricultures Pvt.
-          Ltd. (June 2025-July 2025 )
+          <strong>Data Engineer Intern</strong> at Coding Blocks (August
+          2025-October 2025 )
         </p>
       </div>
       <div className="mt-10">

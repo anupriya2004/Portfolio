@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiDocumentDownload } from "react-icons/hi";
 import { SiLeetcode } from "react-icons/si";
-import resume from "../assets/Anupriya_BCA.pdf";
+import resume from "../assets/Anupriya_Singh_cv_1856.pdf";
 const sectionAnimation = {
   hidden: { opacity: 0, y: 50 },
   visible: (i = 1) => ({

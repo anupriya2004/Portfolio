@@ -13,6 +13,7 @@ import {
   SiMysql,
   SiFigma,
   SiCanva,
+  SiApachespark,
 } from "react-icons/si";
 import { DiPython } from "react-icons/di";
 
@@ -20,21 +21,18 @@ const techLogos = [
   { name: "HTML", icon: <SiHtml5 className="text-orange-500" />, level: 90 },
   { name: "CSS", icon: <SiCss3 className="text-blue-500" />, level: 85 },
   {
-    name: "JavaScript",
-    icon: <SiJavascript className="text-yellow-400" />,
-    level: 80,
+    name: "CSS",
+    icon: <SiApachespark className="text-orange-500" />,
+    level: 85,
   },
+
   {
     name: "Tailwind",
     icon: <SiTailwindcss className="text-cyan-400" />,
     level: 75,
   },
   { name: "React", icon: <SiReact className="text-cyan-300" />, level: 70 },
-  {
-    name: "Node.js",
-    icon: <SiNodedotjs className="text-green-600" />,
-    level: 65,
-  },
+
   { name: "Git", icon: <SiGit className="text-red-500" />, level: 85 },
   { name: "GitHub", icon: <SiGithub className="text-white" />, level: 90 },
   { name: "MySQL", icon: <SiMysql className="text-blue-700" />, level: 80 },
